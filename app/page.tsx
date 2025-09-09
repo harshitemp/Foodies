@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { ChefHat, Users, ShoppingCart, Star, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
+import Script from "next/script" // For embedding external script
 
 export default function LandingPage() {
   return (
@@ -31,7 +32,9 @@ export default function LandingPage() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-secondary text-secondary-foreground">AI-Powered Food Delivery</Badge>
+            <Badge className="mb-6 bg-secondary text-secondary-foreground">
+              AI-Powered Food Delivery
+            </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
               Delicious Food,
               <span className="text-primary"> Delivered Smart</span>
@@ -173,6 +176,12 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Noupe Embed Script */}
+      <Script
+        src="https://www.noupe.com/embed/01992c6ceee372bc9425536da43d5da2a45a.js"
+        strategy="afterInteractive"
+      />
     </div>
   )
 }
