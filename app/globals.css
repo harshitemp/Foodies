@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette for food delivery platform with green theme */
+  --background: oklch(1 0 0); /* Pure white background */
+  --foreground: oklch(0.3 0 0); /* Dark gray text (#374151) */
+  --card: oklch(0.98 0.02 142); /* Soft green background (#f0fdf4) */
+  --card-foreground: oklch(0.3 0 0); /* Dark gray text */
+  --popover: oklch(1 0 0); /* White popover background */
+  --popover-foreground: oklch(0.3 0 0); /* Dark gray text */
+  --primary: oklch(0.45 0.15 142); /* Primary green (#15803d) */
+  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.75 0.15 85); /* Accent lime (#84cc16) */
+  --secondary-foreground: oklch(1 0 0); /* White text on secondary */
+  --muted: oklch(0.98 0.02 142); /* Muted green background */
+  --muted-foreground: oklch(0.5 0 0); /* Medium gray text */
+  --accent: oklch(0.75 0.15 85); /* Accent lime color */
+  --accent-foreground: oklch(1 0 0); /* White text on accent */
+  --destructive: oklch(0.55 0.25 25); /* Red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* White text on destructive */
+  --border: oklch(0.9 0 0); /* Light gray borders */
+  --input: oklch(0.98 0.02 142); /* Soft green input background */
+  --ring: oklch(0.45 0.15 142 / 0.5); /* Primary green focus ring */
+  --chart-1: oklch(0.45 0.15 142); /* Chart color 1 - primary green */
+  --chart-2: oklch(0.75 0.15 85); /* Chart color 2 - accent lime */
+  --chart-3: oklch(0.55 0.25 25); /* Chart color 3 - red */
+  --chart-4: oklch(0.6 0.2 45); /* Chart color 4 - orange */
+  --chart-5: oklch(0.65 0.18 65); /* Chart color 5 - yellow-orange */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.98 0.02 142); /* Sidebar green background */
+  --sidebar-foreground: oklch(0.3 0 0); /* Dark gray sidebar text */
+  --sidebar-primary: oklch(0.45 0.15 142); /* Primary green sidebar */
+  --sidebar-primary-foreground: oklch(1 0 0); /* White text */
+  --sidebar-accent: oklch(0.75 0.15 85); /* Accent lime sidebar */
+  --sidebar-accent-foreground: oklch(1 0 0); /* White text */
+  --sidebar-border: oklch(0.9 0 0); /* Light gray sidebar borders */
+  --sidebar-ring: oklch(0.45 0.15 142 / 0.5); /* Primary green focus ring */
+}
+
+.dark {
+  /* Updated dark mode colors to complement the green theme */
+  --background: oklch(0.1 0 0); /* Very dark background */
+  --foreground: oklch(0.95 0 0); /* Light text */
+  --card: oklch(0.15 0.02 142); /* Dark green card background */
+  --card-foreground: oklch(0.95 0 0); /* Light text on cards */
+  --popover: oklch(0.15 0.02 142); /* Dark green popover */
+  --popover-foreground: oklch(0.95 0 0); /* Light popover text */
+  --primary: oklch(0.55 0.15 142); /* Lighter green for dark mode */
+  --primary-foreground: oklch(0.1 0 0); /* Dark text on primary */
+  --secondary: oklch(0.65 0.15 85); /* Lighter lime for dark mode */
+  --secondary-foreground: oklch(0.1 0 0); /* Dark text on secondary */
+  --muted: oklch(0.2 0.02 142); /* Dark muted green */
+  --muted-foreground: oklch(0.7 0 0); /* Light muted text */
+  --accent: oklch(0.65 0.15 85); /* Lighter accent for dark mode */
+  --accent-foreground: oklch(0.1 0 0); /* Dark text on accent */
+  --destructive: oklch(0.45 0.2 25); /* Darker red for dark mode */
+  --destructive-foreground: oklch(0.9 0.1 25); /* Light red text */
+  --border: oklch(0.25 0 0); /* Dark borders */
+  --input: oklch(0.2 0.02 142); /* Dark green inputs */
+  --ring: oklch(0.55 0.15 142 / 0.5); /* Lighter green focus ring */
+  --chart-1: oklch(0.55 0.15 142); /* Lighter chart colors for dark mode */
+  --chart-2: oklch(0.65 0.15 85);
+  --chart-3: oklch(0.45 0.2 25);
+  --chart-4: oklch(0.5 0.18 45);
+  --chart-5: oklch(0.55 0.16 65);
+  --sidebar: oklch(0.12 0.02 142); /* Dark sidebar */
+  --sidebar-foreground: oklch(0.95 0 0); /* Light sidebar text */
+  --sidebar-primary: oklch(0.55 0.15 142); /* Lighter primary for sidebar */
+  --sidebar-primary-foreground: oklch(0.1 0 0); /* Dark text */
+  --sidebar-accent: oklch(0.65 0.15 85); /* Lighter accent for sidebar */
+  --sidebar-accent-foreground: oklch(0.1 0 0); /* Dark text */
+  --sidebar-border: oklch(0.25 0 0); /* Dark sidebar borders */
+  --sidebar-ring: oklch(0.55 0.15 142 / 0.5); /* Lighter focus ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
